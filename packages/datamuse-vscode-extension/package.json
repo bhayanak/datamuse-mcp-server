@@ -19,6 +19,12 @@
   "main": "./dist/extension.js",
   "extensionDependencies": [],
   "contributes": {
+    "mcpServerDefinitionProviders": [
+      {
+        "id": "datamuse",
+        "label": "Datamuse MCP"
+      }
+    ],
     "configuration": {
       "title": "Datamuse MCP",
       "properties": {
