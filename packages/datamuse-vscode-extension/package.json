@@ -15,7 +15,7 @@
   "engines": {
     "vscode": "^1.99.0"
   },
-  "activationEvents": [],
+  "activationEvents": ["onStartupFinished"],
   "main": "./dist/extension.js",
   "extensionDependencies": [],
   "contributes": {
@@ -45,9 +45,7 @@
           "order": 3
         }
       }
-    },
-    "chatParticipants": [],
-    "languageModelTools": []
+    }
   },
   "scripts": {
     "build": "node build.cjs",

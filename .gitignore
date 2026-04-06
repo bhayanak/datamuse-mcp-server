@@ -10,5 +10,3 @@ coverage/
 .turbo/
 *.md
 !README.md
-packages/datamuse-vscode-extension/server/
-.pnpm-approve-builds

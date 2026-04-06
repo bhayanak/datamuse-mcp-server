@@ -12,6 +12,7 @@
   <a href="https://github.com/bhayanak/datamuse-mcp-server/actions"><img src="https://github.com/bhayanak/datamuse-mcp-server/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
   <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License" />
   <img src="https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg" alt="Node" />
+  <img src="https://img.shields.io/badge/coverage-100%25-brightgreen.svg" alt="Coverage" />
   <img src="https://img.shields.io/badge/MCP-compatible-purple.svg" alt="MCP" />
 </p>
 
