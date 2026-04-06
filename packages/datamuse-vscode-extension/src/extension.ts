@@ -19,7 +19,7 @@ export function activate(context: vscode.ExtensionContext): void {
 
   const mcpServer = new vscode.McpStdioServerDefinition(
     'Datamuse MCP',
-    process.execPath,
+    'node',
     [serverPath],
     {
       DATAMUSE_BASE_URL: baseUrl,

@@ -22,6 +22,11 @@ async function build() {
   fs.mkdirSync(path.dirname(serverDest), { recursive: true });
   if (fs.existsSync(serverSrc)) {
     fs.copyFileSync(serverSrc, serverDest);
+    // Write package.json so Node.js treats .js as ESM
+    fs.writeFileSync(
+      path.join(path.dirname(serverDest), 'package.json'),
+      JSON.stringify({ type: 'module' }, null, 2) + '\n'
+    );
     console.log('Server bundle copied to extension');
   } else {
     console.warn('Warning: Server bundle not found at', serverSrc);
