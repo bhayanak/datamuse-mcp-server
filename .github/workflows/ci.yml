@@ -1,0 +1,54 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18, 20, 22]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm run typecheck
+
+      - name: Lint
+        run: cd packages/datamuse-server && pnpm run lint
+
+      - name: Format check
+        run: cd packages/datamuse-server && pnpm run format
+
+      - name: Test with coverage
+        run: cd packages/datamuse-server && pnpm run test:coverage
+
+      - name: Build server
+        run: cd packages/datamuse-server && pnpm run build
+
+      - name: Build extension
+        run: cd packages/datamuse-vscode-extension && pnpm run build
+
+      - name: Package extension
+        if: matrix.node-version == 22
+        run: cd packages/datamuse-vscode-extension && pnpm run package
+
+      - uses: actions/upload-artifact@v4
+        if: matrix.node-version == 22
+        with:
+          name: datamuse-vsix
+          path: packages/datamuse-vscode-extension/*.vsix

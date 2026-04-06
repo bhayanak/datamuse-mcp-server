@@ -1,0 +1,72 @@
+{
+  "name": "datamuse-mcp",
+  "displayName": "Datamuse MCP — Words, Rhymes & Synonyms",
+  "description": "AI-powered word finding: rhymes, synonyms, antonyms, homophones, autocomplete, and more via the Datamuse API",
+  "version": "0.1.0",
+  "publisher": "bhayanak",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bhayanak/datamuse-mcp-server"
+  },
+  "icon": "logo.png",
+  "categories": ["AI", "Chat"],
+  "keywords": ["mcp", "datamuse", "words", "rhymes", "synonyms", "copilot", "ai", "vocabulary", "linguistics"],
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "extensionDependencies": [],
+  "contributes": {
+    "configuration": {
+      "title": "Datamuse MCP",
+      "properties": {
+        "datamuse.baseUrl": {
+          "type": "string",
+          "default": "https://api.datamuse.com",
+          "description": "Datamuse API base URL",
+          "order": 1
+        },
+        "datamuse.maxResults": {
+          "type": "number",
+          "default": 50,
+          "minimum": 1,
+          "maximum": 1000,
+          "description": "Default maximum results per query",
+          "order": 2
+        },
+        "datamuse.timeoutMs": {
+          "type": "number",
+          "default": 10000,
+          "minimum": 1000,
+          "maximum": 60000,
+          "description": "API request timeout in milliseconds",
+          "order": 3
+        }
+      }
+    },
+    "chatParticipants": [],
+    "languageModelTools": []
+  },
+  "scripts": {
+    "build": "node build.cjs",
+    "package": "vsce package --no-dependencies",
+    "typecheck": "tsc --noEmit",
+    "lint": "echo 'no lint configured'",
+    "lint:fix": "echo 'no lint configured'",
+    "test": "echo 'extension tests not configured'",
+    "test:coverage": "echo 'extension tests not configured'",
+    "format": "echo 'no format configured'",
+    "format:fix": "echo 'no format configured'",
+    "validate": "tsc --noEmit",
+    "ci": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.99.0",
+    "@types/node": "^20.17.57",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.8.3",
+    "@vscode/vsce": "^3.7.1"
+  }
+}

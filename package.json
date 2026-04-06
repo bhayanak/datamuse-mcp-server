@@ -1,0 +1,37 @@
+{
+  "name": "datamuse-mcp-server-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Datamuse MCP Server monorepo — rhymes, synonyms, related words, and more",
+  "scripts": {
+    "build": "pnpm -r run build",
+    "test": "pnpm -r run test",
+    "test:coverage": "pnpm -r run test:coverage",
+    "lint": "pnpm -r run lint",
+    "lint:fix": "pnpm -r run lint:fix",
+    "typecheck": "pnpm -r run typecheck",
+    "format": "pnpm -r run format",
+    "format:fix": "pnpm -r run format:fix",
+    "validate": "pnpm -r run validate",
+    "ci": "pnpm -r run ci"
+  },
+  "keywords": [
+    "mcp",
+    "datamuse",
+    "words",
+    "rhymes",
+    "synonyms",
+    "vocabulary",
+    "linguistics",
+    "ai",
+    "copilot"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=9"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5"
+  }
+}
