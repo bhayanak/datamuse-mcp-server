@@ -188,3 +188,23 @@ npx datamuse-mcp-server
 | `DATAMUSE_BASE_URL` | `https://api.datamuse.com` | API endpoint |
 | `DATAMUSE_MAX_RESULTS` | `50` | Max results per query |
 | `DATAMUSE_TIMEOUT_MS` | `10000` | Request timeout |
+
+## Usage
+
+Ask questions like:
+   - "What rhymes with orange?"
+   - "Find synonyms for happy"
+   - "What words sound like flower?"
+   - "Autocomplete the prefix 'ser'"
+   - words with a meaning similar to ringing in the ears
+   - words related to duck that start with the letter b
+   - words related to spoon that end with the letter a
+   - words that sound like jirraf
+   - words that start with t, end in k, and have two letters in between
+   - words that are spelled similarly to hipopatamus
+   - adjectives that are often used to describe ocean
+   - adjectives describing ocean sorted by how related they are to temperature
+   - nouns that are often described by the adjective yellow
+   - words that often follow "drink" in a sentence, that start with the letter w
+   - words that are triggered by (strongly associated with) the word "cow"
+   - suggestions for the user if they have typed in rawand so far

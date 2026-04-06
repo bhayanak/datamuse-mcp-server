@@ -6,25 +6,6 @@
 
 VS Code extension that registers the Datamuse MCP server for seamless integration with GitHub Copilot Chat and other MCP-compatible AI clients.
 
-## Installation
-
-### From VSIX
-
-1. Download the `.vsix` file from [Releases](https://github.com/bhayanak/datamuse-mcp-server/releases)
-2. In VS Code: `Ctrl+Shift+P` → **Extensions: Install from VSIX...**
-3. Select the downloaded `.vsix` file
-4. Reload VS Code
-
-### From Source
-
-```bash
-cd packages/datamuse-vscode-extension
-pnpm install
-pnpm run build
-pnpm run package
-# Install the generated .vsix file
-```
-
 ## Features
 
 Once installed, the extension:
@@ -52,6 +33,18 @@ Open **Settings** (`Ctrl+,`) and search for "Datamuse":
    - "Find synonyms for happy"
    - "What words sound like flower?"
    - "Autocomplete the prefix 'ser'"
+   - words with a meaning similar to ringing in the ears
+   - words related to duck that start with the letter b
+   - words related to spoon that end with the letter a
+   - words that sound like jirraf
+   - words that start with t, end in k, and have two letters in between
+   - words that are spelled similarly to hipopatamus
+   - adjectives that are often used to describe ocean
+   - adjectives describing ocean sorted by how related they are to temperature
+   - nouns that are often described by the adjective yellow
+   - words that often follow "drink" in a sentence, that start with the letter w
+   - words that are triggered by (strongly associated with) the word "cow"
+   - suggestions for the user if they have typed in rawand so far
 
 ## Troubleshooting
 
